@@ -182,13 +182,14 @@
   //     $("#preloader").delay(1500).fadeOut(2000);
   // })
   
-  
+let status=  document.getElementById('status');
+	      
+let preloader=  document.getElementById('preloader');
 $(function(){ // 確認整個頁面讀取完畢再將這三個div隱藏起來
-      $("#status").delay(500);
-      $("#preloader").delay(1500);
-      $("#status").fadeOut(1500);
-     
-      $("#preloader").fadeOut(2000);
+    status.delay(500);
+    preloader.delay(1500);
+    status.fadeOut(1500);
+      preloader.fadeOut(2000);
   });
   
   </script>
