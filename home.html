@@ -7,9 +7,17 @@
     <title>穎拉麵</title>
     <link rel="stylesheet" href="bootstrap-5.2.0-dist/css/bootstrap.min.css">
 <script src="bootstrap-5.2.0-dist/js/bootstrap.bundle.min.js"></script>
-
 <script src="js/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 <style>
+
+/* - */
+.ml3 {
+  font-weight: 900;
+  font-size: 3.5em;
+}
+/* - */
+
   #preloader {/*  蓋住畫面的底色色塊  */
   position: fixed;
   width: 100%;
@@ -130,7 +138,7 @@
                 <div style="height: 10px;">
                                
                 </div>
-                  <h1>穎拉麵</h1>
+                  <h1 class="ml3">穎拉麵</h1>
                   
                   <div class="hline"></div>
         
@@ -183,16 +191,29 @@
   //     $("#preloader").delay(1500).fadeOut(2000);
   // })
   
-//let status=  document.getElementById('status');	      
-//let preloader=  document.getElementById('preloader');
-	    
-$(function(){ 
-    $("#status").delay(500);
-    $("#preloader").delay(1500);
-    $("#status").fadeOut(1500);
-        $("#preloader").fadeOut(2000);
-  });
   
+window.onload=function() { // 確認整個頁面讀取完畢再將這三個div隱藏起來
+      $("#status").delay(500);
+      $("#preloader").delay(1500);
+      $("#status").fadeOut(1500);
+      $("#preloader").fadeOut(2000);
+  };
+  
+// Wrap every letter 
+var textWrapper = document.querySelector('.ml3');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml3 .letter',
+    opacity: [0,1],
+    easing: "easeInOutQuad",
+    duration: 2250,
+    delay: 200
+  });
+ 
+
   </script>
+  
 </body>
 </html>
