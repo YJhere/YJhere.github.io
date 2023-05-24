@@ -5,18 +5,80 @@
     <meta name="description" content="">
     <meta name="author" content="熊仔其人">
     <title>穎拉麵</title>
-    <!-- 这里是css部分 -->
+
     <link rel="stylesheet" href="bootstrap-5.2.0-dist/css/bootstrap.min.css">
     <script src="bootstrap-5.2.0-dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <style>
-       
+          /* <!-- 是轉盤css部分 -->  */
         html,body{width:100%; height: 100%; margin:0;padding:0;-webkit-tap-highlight-color: transparent; -webkit-touch-callout: none; -webkit-user-select: none; -webkit-font-smoothing: antialiased; font-smoothing: antialiased; -webkit-text-size-adjust: none; -moz-text-size-adjust: none; text-size-adjust: none; text-rendering: optimizeLegibility;}.rel{position:relative;}.abs{position:absolute;}a { color: #fff; outline: 0; text-decoration: none; }em, footer, h1, h2, h3, h4, input, li, mark, nav, ol, p, section, span, textarea, ul { margin: 0; padding: 0; font-weight: 400; list-style: none; font-style: normal; }p { margin: 6px 0; }.f12 { font-size: 12px } .f13 { font-size: 13px } .f14 { font-size: 14px } .f15 { font-size: 15px } .f16 { font-size: 16px } .f17 { font-size: 17px } .f18 { font-size: 18px } .f19 { font-size: 19px } .f20 { font-size: 20px } .f21 { font-size: 21px } .f22 { font-size: 22px } .f23 { font-size: 23px }.f26 { font-size: 26px }
-     
-     
-    
-
+       
+             /*平板模式*/
+        @media screen and (min-width:576px) and (max-width:912px) {
+   
 .back-img{
+    width: 70%;
+    margin-left:16%;
+    padding-top: 100%;
+    background: url(https://img.onl/G4uO6) no-repeat;
+    background-size: 90%;
+}
+.lot-desc{
+
+    top:11%;
+    left:26%;
+    margin-left:-10.5%;
+    margin-top:-8%;
+    width:65%;
+    height:45%;
+    background: url(https://img.onl/rQWkkJ) no-repeat; 
+    background-size: 100% 100%;
+}
+.lot-btn{
+    top:16%;
+    left:37%;
+    margin-left:0%;
+    margin-top:7%;
+    width: 65%;
+    height:42%;
+     background: url(https://img.onl/ZS09Ib) no-repeat; 
+    background-size: 30% 30%;
+}
+	}
+        /*手機模式*/
+        @media screen and (max-width:575px) {
+    .back-img{
+    width: 85%;
+    margin-left:10%;
+    padding-top: 100%;
+    background: url(https://img.onl/G4uO6) no-repeat;
+    background-size: 90%;
+}
+.lot-desc{
+
+    top:11%;
+    left:26%;
+    margin-left:-11%;
+    margin-top:-5%;
+    width: 64%;
+    height:53%;
+    background: url(https://img.onl/rQWkkJ) no-repeat; 
+    background-size: 100% 100%;
+}
+.lot-btn{
+    top:16%;
+    left:37%;
+    margin-left:-1%;
+    margin-top:10%;
+    width: 75%;
+    height:62%;
+     background: url(https://img.onl/ZS09Ib) no-repeat; 
+    background-size: 30% 30%;
+}
+}
+            /*電腦模式*/  
+		@media screen and (min-width:913px) {
+  .back-img{
     width: 50%;
     margin-left:32%;
     padding-top: 100%;
@@ -44,6 +106,7 @@
      background: url(https://img.onl/ZS09Ib) no-repeat; 
     background-size: 30% 30%;
 }
+}
 
     </style>
 </head>
@@ -65,7 +128,7 @@
               </li>
            
               <li class="nav-item">
-                <a class="nav-link" href="#aboutArea">關於穎拉麵</a>
+                <a class="nav-link" href="home.html">關於穎拉麵</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="menu.html">菜單介紹</a>
@@ -90,10 +153,10 @@
           
               <div class="col-md-12">
         <div style="height: 30px;"></div>
-        <h1  style="font-weight: bolder;">今天吃甚麼?</h1>
+        <h1  style="font-weight: bolder;">今天吃什麼?</h1>
                   
               
-                  <p class="lead">不知道吃甚麼嗎 ? 讓幸運輪盤幫你決定 !!</p>
+                  <p class="lead">不知道吃什麼嗎 ? 讓命運輪盤幫你決定 !!</p>
                                       
               </div>
       </div>
@@ -129,55 +192,61 @@
     </div>
   </footer>
   <!-- end footer area -->
-    <script>
+  
+  
+  <script>
        
        var turnplate={
-                restaraunts : [],             //大转盘奖品名称
-                lotteryTimes : 3,             //抽奖次数
+                restaraunts : [],             //轉盤獎品名
+                lotteryTimes : 3,             //抽獎次數
                 bRotate : false,              //false:停止;ture:旋转
-                dtimer : null,               //存放间隔动画的定时器，用来清除运动   
-                timeInterval : 2,            //定时器的间隔时间，旋转角度的速度，越小表示速度越快
-                deg : 0,                    //角度，和css设置对应,初始为0
-                speed : 0,                  //角度变化增量
-                turnNum : 5,                //旋转总圈数
-                sigalTurnNum : 1           //当前累计圈数
+                dtimer : null,               //存放間隔動畫的定時器，用來清除運作   
+                timeInterval : 2,            //定时器的間格時間，旋轉角度的速度，越小表示速度越快
+                deg : 0,                    //角度，和css設置對應,初始為0
+                speed : 0,                  //角度變化增量
+                turnNum : 5,                //旋轉總圈數
+                sigalTurnNum : 1           //目前累計圈數
         };
+        
+        //旋轉轉盤
         var lottery =  document.getElementById("lottery");
-        //旋转转盘总角度 angles,奖品位置; txt：提示语;
+       
+        //旋轉轉盤總角度 angles
+        //獎品位置 txt：(restaraunts[]裡的);
         function rotateFn (angles, txt){
-            /*清除上一个定时器*/
+            /*清除上一個定時器*/
             clearInterval(turnplate.dtimer);
             turnplate.dtimer = null;
-            //变化累计角度
+            //變化累計角度
             turnplate.deg = turnplate.deg + turnplate.speed;
 
             if (turnplate.deg < angles+1800) {
                 lottery.style.transform="rotate(" + turnplate.deg + "deg)";
                 if(turnplate.deg%360 === 0){
                     turnplate.sigalTurnNum += 1;
-                    if( turnplate.sigalTurnNum  ===  turnplate.turnNum - 2 ){//到最后二圈
+                    if( turnplate.sigalTurnNum  ===  turnplate.turnNum - 2 ){//到最後二圈
                              turnplate.speed = 2;
-                    }else if( turnplate.sigalTurnNum  ===  turnplate.turnNum - 1 ){//到最后一圈
+                    }else if( turnplate.sigalTurnNum  ===  turnplate.turnNum - 1 ){//到最後一圈
                              turnplate.speed =1;
                     }; 
                 }
-                if( turnplate.sigalTurnNum  ===  turnplate.turnNum - 1 ){//到最后1圈圈
+                if( turnplate.sigalTurnNum  ===  turnplate.turnNum - 1 ){//到最後1圈
                         turnplate.speed =  (turnplate.speed <= 0.2) ? 0.2 : (turnplate.speed-0.0015);
                 };
                 turnplate.dtimer = setInterval(function () {
                    rotateFn(angles, txt);
                 }, turnplate.timeInterval);
             }else{
-              Swal.fire(
-                '今天適合吃...',txt, 'success')
-                // alert(txt);
+              Swal.fire('今天適合吃...',txt, 'success')
+                
                 turnplate.bRotate = !turnplate.bRotate;
             }
         };
         
             turnplate.restaraunts = ["柚香味增拉麵", "全部吃一輪!","海海中卷拉麵", "香香金桔拉麵","珍好貝貝拉麵","濃厚豚骨拉麵"];
             document.getElementById("pointer").onclick = function () {
-                if(turnplate.bRotate)return false;
+              
+              if(turnplate.bRotate)return false;
                 if (turnplate.lotteryTimes <= 0) {
                     alert("");
                     return false;
@@ -189,15 +258,16 @@
                 turnplate.deg = 0;
                 turnplate.speed = 4;
                 turnplate.sigalTurnNum = 0;
-                // 获取随机数(奖品个数范围内)
+                // 獲得隨機數(rrestaraunts[]範圍内)
                 var item = rnd(1,turnplate.restaraunts.length);
                 // var item =0;
-                //指针转到指定位置的中间,这个角度为逆时针方向的，要根据顺时针方向的定位前面要取负数
+                //?指針轉到中間,這個角度為逆時針方向的，要根據順時針方向的定位 前面要取負數?
+
                 var angles = -(item-1) * (360 / turnplate.restaraunts.length);
                 console.log(item);
                 rotateFn(angles, turnplate.restaraunts[item-1]);
             }
-        //}
+      
         function rnd(n, m){
             var random = Math.floor(Math.random()*(m-n+1)+n);
             return random;
