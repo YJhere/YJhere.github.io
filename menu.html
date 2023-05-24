@@ -1,10 +1,14 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<title>穎拉麵</title>
-<link rel="stylesheet" href="bootstrap-5.2.0-dist/css/bootstrap.min.css">
-<script src="bootstrap-5.2.0-dist/js/bootstrap.bundle.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>穎拉麵</title>
+
+    <link rel="stylesheet" href="bootstrap-5.2.0-dist/css/bootstrap.min.css">
+    <script src="bootstrap-5.2.0-dist/js/bootstrap.bundle.min.js"></script>
+ 
 <script src="js/jquery-3.6.0.min.js"></script>
 
 <style>
@@ -13,10 +17,20 @@
 	#ufo{
 		display: none;
 	}
+	#ufoo{
+
+display: none;
+}
 	#r1{
 		display: none;
 	}
 	#r2{
+		display: none;
+	}
+	#r11{
+		display: none;
+	}
+	#r22{
 		display: none;
 	}
 	}
@@ -29,6 +43,16 @@
 		display: none;
 	}
 	#r2{
+		display: none;
+	}
+	#ufoo{
+
+		display: none;
+		}
+	#r11{
+		display: none;
+	}
+	#r22{
 		display: none;
 	}
         }
@@ -59,14 +83,15 @@
 		width: 40px;
 		height:40px;
 	}
-}</style>
+}
+
+</style>
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg bg-body-tertiary" >
 		<div class="container-fluid">
 			<a class="navbar-brand" href="home.html">
-				<img src="images/logo2.png" alt="Logo" width="155" height="60" class="d-inline-block align-text-top">
-				
+				<img src="images/logo2.png" alt="Logo" width="155" height="60" class="d-inline-block align-text-top">     
 			  </a>
 		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -95,12 +120,9 @@
 		</div>
 	  </nav>
 
-	  <section id="serviceArea" style="background-color: #efe5db;margin-bottom:20px;">
-
-	  	<div class="container">   
-             
-         	
-    	<div class="container">   
+	  <section id="serviceArea" style="background-color: #efe5db;">
+	 
+    	<div class="container"> 
              
             <div class="row text-center">
             
@@ -113,20 +135,27 @@
                 </div>
                 
 			</div>
-			<div class="container-lg mt-5 " id="first">
+
+
+			<div class="container-lg mt-5 " >
 				<div class="row">
 					<div class="col">
+						
 			  <div class="row row-cols-1 row-cols-md-3 g-4">
+
 				<div class="col">
-				  <div class="card">
-					<img src="images/la1.jpg" class="card-img-top" alt="...">
-					<div class="card-body">
+					<div class="card">
+					  <img src="images/la1.jpg" class="card-img-top" alt="...">
+					  <div class="card-body">
 						<h3 class="card-title" style="font-weight: bolder;">珍好貝貝拉麵</h3>
 					  <p class="card-text">湯相當鮮甜，貝的清甜與醬油的鹹香，卻不會有負擔感。帶著柴魚香的燉蘿蔔，十分好入口。</p>
 					  
+					  </div>
 					</div>
 				  </div>
-				</div>
+
+
+			
 				
 				<div class="col">
 				  <div class="card">
@@ -179,21 +208,22 @@
 		
 		  <div id="ufo">
 
-			<img class="img" id="ta" src="images/hungry.png"/>
+			<img   id="ufoo" class="img" id="ta" src="images/hungry.png"/>
 		
 		</div> 
 		<div id="r1">
 		
-			<img class="img" src="images/r1 (1).png"/>
+			<img  id="r11" class="img" src="images/r1 (1).png"/>
 		
 		</div>
 		<div id="r2">
 		
-			<img class="img" src="images/r1 (2).png"/>
+			<img id="r22"class="img" src="images/r1 (2).png"/>
 		
 		</div>
-</div>
+
 		</div>
+
 		<div style="height: 20px;"></div>
 		</section>	
 		
@@ -202,8 +232,8 @@
 			<div class="container text-center">             
 				  <div class="row">
 					  <div class="col-md-12"> 
-					        	
-						  <div class="logo-bottom"><a href="#first"> <img src="images/logo.png"  height="32"></a></div>
+						<div style="height: 10px;"></div>     	
+						  <div class="logo-bottom"><a href="home.html"> <img src="images/logo.png"  height="32"></a></div>
 						  <div class="copyright">&copy; 2022 YJ Ramen 模擬作業並無此品牌，此頁圖片取自墨洋拉麵。</div>
 							</div>
 				  </div>		
@@ -212,8 +242,6 @@
 		  <!-- end footer area -->
 
 <script>
-
-
 $(function(){
             function draw(){
                 $("#r2").animate({left:"30.5%" },6000); 
