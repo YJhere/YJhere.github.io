@@ -2,20 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>穎拉麵</title>
-
     <link rel="stylesheet" href="bootstrap-5.2.0-dist/css/bootstrap.min.css">
-    <script src="bootstrap-5.2.0-dist/js/bootstrap.bundle.min.js"></script>
+<script src="bootstrap-5.2.0-dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <style>
           /* <!-- 是轉盤css部分 -->  */
-        html,body{width:100%; height: 100%; margin:0;padding:0;-webkit-tap-highlight-color: transparent; -webkit-touch-callout: none; -webkit-user-select: none; -webkit-font-smoothing: antialiased; font-smoothing: antialiased; -webkit-text-size-adjust: none; -moz-text-size-adjust: none; text-size-adjust: none; text-rendering: optimizeLegibility;}.rel{position:relative;}.abs{position:absolute;}a { color: #fff; outline: 0; text-decoration: none; }em, footer, h1, h2, h3, h4, input, li, mark, nav, ol, p, section, span, textarea, ul { margin: 0; padding: 0; font-weight: 400; list-style: none; font-style: normal; }p { margin: 6px 0; }.f12 { font-size: 12px } .f13 { font-size: 13px } .f14 { font-size: 14px } .f15 { font-size: 15px } .f16 { font-size: 16px } .f17 { font-size: 17px } .f18 { font-size: 18px } .f19 { font-size: 19px } .f20 { font-size: 20px } .f21 { font-size: 21px } .f22 { font-size: 22px } .f23 { font-size: 23px }.f26 { font-size: 26px }
-       
-             /*平板模式*/
+         /*平板模式*/
         @media screen and (min-width:576px) and (max-width:912px) {
-   
+          html,body{width:100%; height: 100%; margin:0;padding:0;-webkit-tap-highlight-color: transparent; -webkit-touch-callout: none; -webkit-user-select: none; -webkit-font-smoothing: antialiased; font-smoothing: antialiased; -webkit-text-size-adjust: none; -moz-text-size-adjust: none; text-size-adjust: none; text-rendering: optimizeLegibility;}.rel{position:relative;}.abs{position:absolute;}a { color: #fff; outline: 0; text-decoration: none; }em, footer, h1, h2, h3, h4, input, li, mark, nav, ol, p, section, span, textarea, ul { margin: 0; padding: 0; font-weight: 400; list-style: none; font-style: normal; }p { margin: 6px 0; }.f12 { font-size: 12px } .f13 { font-size: 13px } .f14 { font-size: 14px } .f15 { font-size: 15px } .f16 { font-size: 16px } .f17 { font-size: 17px } .f18 { font-size: 18px } .f19 { font-size: 19px } .f20 { font-size: 20px } .f21 { font-size: 21px } .f22 { font-size: 22px } .f23 { font-size: 23px }.f26 { font-size: 26px }
+       
+       
 .back-img{
     width: 70%;
     margin-left:16%;
@@ -31,7 +32,7 @@
     margin-top:-8%;
     width:65%;
     height:45%;
-    background: url(images/rest.png) no-repeat;
+    background: url(https://img.onl/rQWkkJ) no-repeat; 
     background-size: 100% 100%;
 }
 .lot-btn{
@@ -41,17 +42,19 @@
     margin-top:7%;
     width: 65%;
     height:42%;
-    background: url(images/btn.png) no-repeat;
+     background: url(https://img.onl/ZS09Ib) no-repeat; 
     background-size: 30% 30%;
 }
 	}
         /*手機模式*/
-        @media screen and (max-width:576px) {
+        @media screen and (max-width:575px) {
+          html,body{width:100%; height: 100%; margin:0;padding:0;-webkit-tap-highlight-color: transparent; -webkit-touch-callout: none; -webkit-user-select: none; -webkit-font-smoothing: antialiased; font-smoothing: antialiased; -webkit-text-size-adjust: none; -moz-text-size-adjust: none; text-size-adjust: none; text-rendering: optimizeLegibility;}.rel{position:relative;}.abs{position:absolute;}a { color: #fff; outline: 0; text-decoration: none; }em, footer, h1, h2, h3, h4, input, li, mark, nav, ol, p, section, span, textarea, ul { margin: 0; padding: 0; font-weight: 400; list-style: none; font-style: normal; }p { margin: 6px 0; }.f12 { font-size: 12px } .f13 { font-size: 13px } .f14 { font-size: 14px } .f15 { font-size: 15px } .f16 { font-size: 16px } .f17 { font-size: 17px } .f18 { font-size: 18px } .f19 { font-size: 19px } .f20 { font-size: 20px } .f21 { font-size: 21px } .f22 { font-size: 22px } .f23 { font-size: 23px }.f26 { font-size: 26px }
+       
     .back-img{
     width: 85%;
     margin-left:10%;
     padding-top: 100%;
-    background: url(images/back.png) no-repeat;
+    background: url(https://img.onl/G4uO6) no-repeat;
     background-size: 90%;
 }
 .lot-desc{
@@ -62,7 +65,7 @@
     margin-top:-5%;
     width: 64%;
     height:53%;
-    background: url(images/rest.png) no-repeat;
+    background: url(https://img.onl/rQWkkJ) no-repeat; 
     background-size: 100% 100%;
 }
 .lot-btn{
@@ -72,17 +75,19 @@
     margin-top:10%;
     width: 75%;
     height:62%;
-    background: url(images/btn.png) no-repeat;
+     background: url(https://img.onl/ZS09Ib) no-repeat; 
     background-size: 30% 30%;
 }
 }
             /*電腦模式*/  
-		@media screen and (min-width:912px) {
+		@media screen and (min-width:913px) {
+      html,body{width:100%; height: 100%; margin:0;padding:0;-webkit-tap-highlight-color: transparent; -webkit-touch-callout: none; -webkit-user-select: none; -webkit-font-smoothing: antialiased; font-smoothing: antialiased; -webkit-text-size-adjust: none; -moz-text-size-adjust: none; text-size-adjust: none; text-rendering: optimizeLegibility;}.rel{position:relative;}.abs{position:absolute;}a { color: #fff; outline: 0; text-decoration: none; }em, footer, h1, h2, h3, h4, input, li, mark, nav, ol, p, section, span, textarea, ul { margin: 0; padding: 0; font-weight: 400; list-style: none; font-style: normal; }p { margin: 6px 0; }.f12 { font-size: 12px } .f13 { font-size: 13px } .f14 { font-size: 14px } .f15 { font-size: 15px } .f16 { font-size: 16px } .f17 { font-size: 17px } .f18 { font-size: 18px } .f19 { font-size: 19px } .f20 { font-size: 20px } .f21 { font-size: 21px } .f22 { font-size: 22px } .f23 { font-size: 23px }.f26 { font-size: 26px }
+       
   .back-img{
     width: 50%;
     margin-left:32%;
     padding-top: 100%;
-    background: url(images/back.png) no-repeat;
+    background: url(https://img.onl/G4uO6) no-repeat;
     background-size: 70%;
 }
 .lot-desc{
@@ -93,7 +98,7 @@
     margin-top:-15.5%;
     width: 50%;
     height:25%;
-    background: url(images/rest.png) no-repeat;
+    background: url(https://img.onl/rQWkkJ) no-repeat; 
     background-size: 100% 100%;
 }
 .lot-btn{
@@ -103,7 +108,7 @@
     margin-top:-9%;
     width: 50%;
     height:25%;
-    background: url(images/btn.png) no-repeat;
+     background: url(https://img.onl/ZS09Ib) no-repeat; 
     background-size: 30% 30%;
 }
 }
@@ -184,8 +189,8 @@
  <footer id="footerArea" style="background-color: #fff;" >
   <div class="container text-center">             
       <div class="row">
-        <div class="col-md-12">   
-		 <div style="height: 10px;"></div>  
+        <div class="col-md-12">          	
+          <div style="height: 10px;"></div>
           <div class="logo-bottom"><a href="home.html"> <img src="images/logo.png"  height="32"></a></div>
           <div class="copyright">&copy;2022 YJ Ramen 模擬作業並無此品牌</div>
           </div>
