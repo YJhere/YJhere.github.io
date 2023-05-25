@@ -10,7 +10,23 @@
 
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <style>
+   <!-- 字體 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;600&display=swap" rel="stylesheet">
+<!-- -- -->
+<style>
+
+/* 字型體- */
+.fon {
+font-weight: 700;
+  font-family: 'Noto Serif TC', serif;
+}
+.fon2 {
+font-weight: 400;
+  font-family: 'Noto Serif TC', serif;
+}
+/* - */
           /* <!-- 是轉盤css部分 -->  */
          /*平板模式*/
         @media screen and (min-width:576px) and (max-width:912px) {
@@ -120,7 +136,7 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="home.html">
-                <img src="images/logo2.png" alt="Logo" width="150" height="60" class="d-inline-block align-text-top">
+                <img src="images/logo2.png" alt="Logo" width="160" height="60" class="d-inline-block align-text-top">
                 
               </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -158,10 +174,10 @@
           
               <div class="col-md-12">
         <div style="height: 30px;"></div>
-        <h1  style="font-weight: bolder;">今天吃什麼?</h1>
+        <h1  class="fon" style="font-weight: bolder;">今天吃什麼?</h1>
                   
               
-                  <p class="lead">不知道吃什麼嗎 ? 讓命運輪盤幫你決定 !!</p>
+                  <p  class="fon2 ">不知道吃什麼嗎? 讓命運輪盤幫你決定!!</p>
                                       
               </div>
       </div>
@@ -192,7 +208,7 @@
         <div class="col-md-12">          	
           <div style="height: 10px;"></div>
           <div class="logo-bottom"><a href="home.html"> <img src="images/logo.png"  height="32"></a></div>
-          <div class="copyright">&copy;2022 YJ Ramen 模擬練習並無此品牌</div>
+          <div class="copyright fon2">&copy;2022 YJ Ramen 模擬練習並無此品牌</div>
           </div>
       </div>		
     </div>
