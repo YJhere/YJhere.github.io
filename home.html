@@ -9,12 +9,21 @@
 <script src="bootstrap-5.2.0-dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<!-- 字體 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;600&display=swap" rel="stylesheet">
+<!-- -- -->
 <style>
 
-/* - */
-.ml3 {
-  font-weight: 900;
-  font-size: 3.5em;
+/* 字型體- */
+.fon {
+font-weight: 700;
+  font-family: 'Noto Serif TC', serif;
+}
+.fon2 {
+font-weight: 400;
+  font-family: 'Noto Serif TC', serif;
 }
 /* - */
 
@@ -67,7 +76,7 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #efe5db;" >
         <div class="container-fluid">
             <a class="navbar-brand" href="home.html">
-                <img src="images/logo.png" alt="Logo" width="155" height="60" class="d-inline-block align-text-top">
+                <img src="images/logo.png" alt="Logo" width="160" height="60" class="d-inline-block align-text-top">
                 
               </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -140,11 +149,11 @@
                 <div style="height: 10px;">
                                
                 </div>
-                  <h1 class="ml3">穎拉麵</h1>
+                  <h1 class="fon">穎拉麵</h1>
                   
                   <div class="hline"></div>
         
-                  <p class="lead">100年在地老店</p>
+                  <p class="fon2 lead">100年  在地老店</p>
                                       
               </div>
       
@@ -152,7 +161,7 @@
                 
               <div class="col-md-12">
                  
-                  <h5>穎拉麵，憑藉著店主對拉麵的喜愛，於退休後開了第一間拉麵專賣店，剛開始只販售豚骨拉麵，後來加入各種海鮮及水果系拉麵，隨著時間口耳相傳，每每經過都是高朋滿座。穎拉麵專門店，是家出了名的海鮮拉麵店，總店設於永和，並在海外開設多家店舖。</h5>
+                  <h5 class="fon2">穎拉麵，憑藉著店主對拉麵的喜愛，退休後開了第一間拉麵專賣店，剛開始只賣豚骨拉麵，後來加入各種海鮮及水果系拉麵，隨著時間口耳相傳，每每經過都是高朋滿座。穎拉麵，是家出了名的海鮮拉麵店，總店設於永和，在台灣開設3家店舖。</h5>
           </div>
               
               
@@ -178,7 +187,7 @@
                  <div class="col-md-12">    
                   <div style="height: 10px;"> </div>      	
                      <div class="logo-bottom"><a href="#first"> <img src="images/logo2.png"  height="32"></a></div>
-                     <div class="copyright">&copy; 2022 YJ Ramen 模擬練習並無此品牌，首頁圖片取自文章 https://www.wowlavie.com/article/ae2101902</div>
+                     <div class=" fon2 copyright">&copy; 2022 YJ Ramen 模擬練習並無此品牌，首頁圖片取自文章 https://www.wowlavie.com/article/ae2101902</div>
                        </div>
              </div>		
          </div>
@@ -203,12 +212,12 @@ window.onload=function() { // 確認整個頁面讀取完畢再將這三個div�
   };
   
 // Wrap every letter 
-var textWrapper = document.querySelector('.ml3');
+var textWrapper = document.querySelector('.fon');
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
 anime.timeline({loop: true})
   .add({
-    targets: '.ml3 .letter',
+    targets: '.fon .letter',
     opacity: [0,1],
     easing: "easeInOutQuad",
     duration: 2250,
