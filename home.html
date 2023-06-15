@@ -209,26 +209,25 @@ font-weight: 600;
       <div id="status"><img src="images/loading.gif"/></div>
     </div>
     <script>
-  //   $(window).load(function() { // 確認整個頁面讀取完畢再將這三個div隱藏起來
+  //   $(window).load(function() { // 確認整個頁面讀取完畢再將div隱藏起來
   //     $("#status").delay(500).fadeOut(1500);
   //     $("#preloader").delay(1500).fadeOut(2000);
   // })
   
   
-window.onload=function() { // 確認整個頁面讀取完畢再將這三個div隱藏起來
+window.onload=function() { // 確認整個頁面讀取完畢再將div隱藏起來
       $("#status").delay(800);
       $("#preloader").delay(1800);
       $("#status").fadeOut(1700);
       $("#preloader").fadeOut(2200);
   };
   
-// Wrap every letter 
+
 var textWrapper = document.querySelector('.fon');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
 anime.timeline({loop: true})
   .add({
-    targets: '.fon .letter',
+    targets: '.fon',
     opacity: [0,1],
     easing: "easeInOutQuad",
     duration: 2250,
